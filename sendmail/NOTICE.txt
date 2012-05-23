@@ -1,7 +1,0 @@
-Sendmail, Copyright (C) 2012 Callista Enterprise AB
-
-This application includes the following software:
-
-Java Mail (com.sun.mail) 1.4.5
-License under Common development and distribution license (CDDL) Version 1.0
-http://www.oracle.com/technetwork/java/index.html
