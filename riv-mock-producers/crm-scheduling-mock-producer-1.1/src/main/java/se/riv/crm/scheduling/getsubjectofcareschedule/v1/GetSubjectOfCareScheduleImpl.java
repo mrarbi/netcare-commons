@@ -37,7 +37,6 @@ public class GetSubjectOfCareScheduleImpl implements GetSubjectOfCareScheduleRes
 
     SimpleDateFormat format = new SimpleDateFormat("yyyyMMddhhmmss");
 
-    @Override
     public GetSubjectOfCareScheduleResponseType getSubjectOfCareSchedule(
             String arg0, ActorType arg1, GetSubjectOfCareScheduleType parameters) {
         GetSubjectOfCareScheduleResponseType response = new GetSubjectOfCareScheduleResponseType();

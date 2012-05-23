@@ -34,7 +34,7 @@
     <import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
     <import resource="classpath:META-INF/cxf/cxf-extension-soap.xml" />
 
-    <jaxws:endpoint 
+    <jaxws:endpoint  
       id="getSubjectOfCareSchedule" 
       implementor="se.riv.crm.scheduling.getsubjectofcareschedule.v1.GetSubjectOfCareScheduleImpl" 
       address="/GetSubjectOfCareSchedule" />

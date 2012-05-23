@@ -14,7 +14,7 @@
     <artifactId>crm-scheduling-mock-producer-1.1</artifactId>
     <name>${project.artifactId}</name>
     <packaging>war</packaging>
-
+    
     <dependencies>
         <!-- Schemas -->
         <dependency>
@@ -28,16 +28,11 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
             <exclusions>
-                <!-- Exclude Commons Logging in favor of SLF4j -->
                 <exclusion>
                     <groupId>commons-logging</groupId>
                     <artifactId>commons-logging</artifactId>
                 </exclusion>
             </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-web</artifactId>
         </dependency>
 
         <!-- CXF -->

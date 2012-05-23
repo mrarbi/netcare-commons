@@ -20,12 +20,7 @@
  */
 package se.riv.crm.scheduling.getsubjectofcareschedule.v1;
 
-import java.net.URL;
-
 import javax.xml.ws.Endpoint;
-
-import org.apache.cxf.Bus;
-import org.apache.cxf.bus.spring.SpringBusFactory;
 
 public class Producer {
 
@@ -47,7 +42,7 @@ public class Producer {
     protected Producer() throws Exception {
         System.out.println("Starting Producer");
         final Object implementor = new GetSubjectOfCareScheduleImpl();
-        final String address = "http://localhost:9090/Schedulr/ws/GetSubjectOfCareSchedule";
+        final String address = "http://localhost:9091/Schedulr/ws/GetSubjectOfCareSchedule";
         Endpoint.publish(address, implementor);
     }
 
