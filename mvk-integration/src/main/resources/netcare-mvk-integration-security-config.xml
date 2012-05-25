@@ -24,10 +24,6 @@
        xsi:schemaLocation="
 	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
 	http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.1.xsd">
-	
-	<security:http pattern="${mvk.system.preauth.url}" entry-point-ref="mvkEntryPoint" access-denied-page="${mvk.system.denied.url}">
-		<security:custom-filter position="PRE_AUTH_FILTER" ref="mvkPreAuthFilter"/>
-	</security:http>
 
 	<bean id="mvkEntryPoint" class="org.springframework.security.web.authentication.Http403ForbiddenEntryPoint" 
 		name="http403ForbiddenEntryPoint">

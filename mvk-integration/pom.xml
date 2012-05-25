@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.callistasoftware.netcare.commons</groupId>
   <artifactId>mvk-integration</artifactId>
-  <name>Netcare MVK Integration</name>
+  <name>Netcare Commons - MVK Integration</name>
   <description>Authentication Module for MVK</description>
   
   <version>1.0</version>
@@ -115,6 +115,15 @@
   
   <build>
   	<plugins>
+  		<plugin>
+  			<groupId>org.apache.maven.plugins</groupId>
+  			<artifactId>maven-compiler-plugin</artifactId>
+  			<version>2.4</version>
+  			<configuration>
+  				<source>1.6</source>
+  				<target>1.6</target>
+  			</configuration>
+  		</plugin>
   		<plugin>
   			<groupId>org.apache.cxf</groupId>
   			<artifactId>cxf-codegen-plugin</artifactId>
