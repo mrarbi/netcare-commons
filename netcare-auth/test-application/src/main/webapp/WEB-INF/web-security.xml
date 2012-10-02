@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Inera Webcert - Sjukintygsapplikation
+
+Copyright (C) 2010-2011 Inera AB (http://www.inera.se)
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses />.
+-->
+
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+             xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:p="http://www.springframework.org/schema/p"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans
+						http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+                        http://www.springframework.org/schema/security 
+                        http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+
+	<http security="none" pattern="/web/login" />
+	<http security="none" pattern="/web/resources/**" />
+
+    <http auto-config="false">
+        <intercept-url pattern="/web/hi" access="ROLE_USER" requires-channel="https"/>
+        <x509 subject-principal-regex="SERIALNUMBER=([^=,]*)" user-service-ref="userDetailsServiceImpl"/>
+    </http>
+
+    <authentication-manager/>
+
+<!--     <beans:bean id="userDetailsService"	class="se.inera.ifv.auth.api.implementation.UserDetailsServiceImpl">
+        <beans:property name="userPropertiesResolver">
+            <beans:bean class="se.inera.ifv.auth.api.implementation.UserPropertiesResolverImpl"/>
+        </beans:property>
+    </beans:bean>
+ -->
+</beans:beans>
