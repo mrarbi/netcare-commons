@@ -22,7 +22,28 @@
 
 <div id="contentContainer">
 	<h1>${title}</h1>
-	<jsp:doBody />
+	
+	<div id="inboxDetailWrapperTop">
+		<div class="wrapper"></div>
+		<div class="left"></div>
+		<div class="right"></div>
+	</div>
+	
+	<div id="inboxDetailWrapper">
+		<div class="wrapper">
+		<div id="maincontainerwrapper">
+			<jsp:doBody />
+		</div>
+		<div class="clear"></div>
+	</div>
+	</div>
+	
+	<div id="inboxDetailWrapperBottom">
+		<div class="wrapper"></div>
+		<div class="left"></div>
+		<div class="right"></div>
+	</div>
+	
 </div>
 <div class="clear"></div>
 		
