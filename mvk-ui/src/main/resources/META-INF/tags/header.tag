@@ -28,7 +28,7 @@
 	<title>${title}</title>
 	
 	<link rel="icon" href="<c:url value="/favicon.ico" />" type="image/vnd.microsoft.icon"/>
-	<link rel="stylesheet" href="${resourcePath}/css/bootstrap-responsive-2.2.1.min.css" />
+	<link rel="stylesheet" href="${resourcePath}/css/bootstrap-2.2.1.min.css" />
 	<link rel="stylesheet" href="${resourcePath}/css/jquery-ui-1.8.24.custom.css" />
 	<link rel="stylesheet" href="${resourcePath}/css/mvk-ui.css" />
 	
