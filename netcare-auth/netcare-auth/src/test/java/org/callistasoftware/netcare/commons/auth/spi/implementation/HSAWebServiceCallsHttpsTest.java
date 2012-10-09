@@ -19,7 +19,7 @@ public class HSAWebServiceCallsHttpsTest {
     @Test
 	public void testPingMethod() throws Exception {
 		try{
-//			Thread.sleep(60000);
+			Thread.sleep(60000);
 			client.callPing();
 		} catch (Exception ex) {
 			fail();

@@ -38,6 +38,10 @@
 	<logger name="javax.net.ssl" level="DEBUG" />
 	<logger name="org.mortbay.log.class" level="DEBUG" />
 	
+	<logger name="javax.net.ssl.trustStore" level="DEBUG" />
+	<logger name="org.apache.cxf" level="DEBUG" />
+	<logger name="org.apache.cxf.Logger" level="DEBUG" />
+	
 
 	<root level="DEBUG">
 		<appender-ref ref="STDOUT" />
