@@ -33,8 +33,12 @@
         http://cxf.apache.org/configuration/security http://cxf.apache.org/schemas/configuration/security.xsd
         http://cxf.apache.org/transports/http-jetty/configuration http://cxf.apache.org/schemas/configuration/http-jetty.xsd">
         
+    <import resource="classpath:META-INF/cxf/cxf.xml" />
+    <import resource="classpath:META-INF/cxf/cxf-extension-soap.xml" />
+    <import resource="classpath:META-INF/cxf/cxf-extension-http.xml" />
+    <import resource="classpath:META-INF/cxf/cxf-extension-http-jetty.xml" />
+
 	<context:annotation-config />
-	
 	<context:property-placeholder location="classpath:/auth-https-test.config.properties"/>	
 	
 	<context:component-scan base-package="org.callistasoftware.netcare.commons.auth.spi.implementation, 
@@ -45,11 +49,11 @@
 	  <httpj:tlsServerParameters>
 	    <sec:keyManagers keyPassword="password">
 	         <sec:keyStore type="JKS" password="password" 
-	              file="/Users/faheem/Documents/workspace/test-auth/src/test/resources/testCertificates/serverKeyStore.jks"/>
+	              resource="testCertificates2/serverKeyStore.jks"/>
 	    </sec:keyManagers>
 	    <sec:trustManagers>
 	        <sec:keyStore type="JKS" password="password"
-	             file="/Users/faheem/Documents/workspace/test-auth/src/test/resources/testCertificates/serverKeyStore.jks"/>
+	             resource="testCertificates2/serverTrustStore.jks"/>
 	    </sec:trustManagers>
 	    <sec:cipherSuitesFilter>
 	      <!-- these filters ensure that a ciphersuite with
@@ -59,7 +63,7 @@
 	      <sec:include>.*_EXPORT_.*</sec:include>
 	      <sec:include>.*_EXPORT1024_.*</sec:include>
 	      <sec:include>.*_WITH_DES_.*</sec:include>
-	      <sec:include>.*_WITH_NULL_.*</sec:include>
+	      <sec:exclude>.*_WITH_NULL_.*</sec:exclude>
 	      <sec:exclude>.*_DH_anon_.*</sec:exclude>
 	    </sec:cipherSuitesFilter>
 	    <sec:clientAuthentication want="true" required="true"/>
@@ -77,16 +81,15 @@
 		</cxf:features>
 	</cxf:bus>
 
-<!-- {urn:riv:hsa:HsaWs:3}HsaWsResponderPort -->
-	<http:conduit name="*.http-conduit">
+	<http:conduit name="{urn:riv:hsa:HsaWs:3}HsaWsResponderPort.http-conduit">
 			<http:tlsClientParameters disableCNCheck="true">
- 			<sec:keyManagers keyPassword="${hsa.ws.key.manager.password}">
-				<sec:keyStore file="${hsa.ws.certificate.file}"
-					password="${hsa.ws.certificate.password}" type="${hsa.ws.certificate.type}" />
+ 			<sec:keyManagers keyPassword="password">
+				<sec:keyStore resource="testCertificates2/clientKeyStore.jks"
+					password="password" type="JKS" />
 			</sec:keyManagers>
 			<sec:trustManagers>
-				<sec:keyStore file="${hsa.ws.truststore.file}"
-					password="${hsa.ws.truststore.password}" type="${hsa.ws.truststore.type}" />
+				<sec:keyStore resource="testCertificates2/clientTrustStore.jks"
+					password="password" type="JKS" />
 			</sec:trustManagers>
 
 			<sec:cipherSuitesFilter>
@@ -96,7 +99,7 @@
 				<sec:include>.*_EXPORT_.*</sec:include>
 				<sec:include>.*_EXPORT1024_.*</sec:include>
 				<sec:include>.*_WITH_DES_.*</sec:include>
-				<sec:include>.*_WITH_NULL_.*</sec:include>
+				<sec:exclude>.*_WITH_NULL_.*</sec:exclude>
 				<sec:exclude>.*_DH_anon_.*</sec:exclude>
 			</sec:cipherSuitesFilter>
 		</http:tlsClientParameters>
