@@ -22,8 +22,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses />.
 	<groupId>se.inera.ifv</groupId>
 	<version>1.0-SNAPSHOT</version>
 
-	<artifactId>test-auth</artifactId>
-	<name>test-auth</name>
+	<artifactId>netcare-auth</artifactId>
+	<name>netcare-auth</name>
 
 	<properties>
 	    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
