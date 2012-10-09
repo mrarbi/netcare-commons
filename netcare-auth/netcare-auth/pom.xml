@@ -196,6 +196,43 @@ along with this program.  If not, see <http://www.gnu.org/licenses />.
 		</plugins>
 		<pluginManagement>
 			<plugins>
+  			<plugin>
+	  			<groupId>com.mycila.maven-license-plugin</groupId>
+	  			<artifactId>maven-license-plugin</artifactId>
+	  			<configuration>
+	  				<properties>
+	  					<year>2011,2012</year>
+	  				</properties>
+	  				<strictCheck>true</strictCheck>
+	  				<header>src/license/apache_v2/header.txt</header>
+	  				<encoding>UTF-8</encoding>
+	  				<includes>
+	  					<include>src/main/**</include>
+	  					<include>src/test/**</include>
+	  				</includes>
+	  				<excludes>
+	  					<exclude>**/*jquery*</exclude>
+	  					<exclude>**/*bootstrap*</exclude>
+	  					<exclude>**/*json2*</exclude>
+	  					<exclude>**/*.xsd</exclude>
+	  					<exclude>**/scripts/*</exclude>
+	  					<exclude>**/*.cert</exclude>
+	  					<exclude>**/*.jks</exclude>
+	  				</excludes>
+	  				<mapping>
+	  					<tag>DYNASCRIPT_STYLE</tag>
+	  				</mapping>
+	  			</configuration>
+	  			<executions>
+	  				<execution>
+	  					<id>check-headers-for-license</id>
+	  					<goals>
+	  						<goal>check</goal>
+	  					</goals>
+	  					<phase>validate</phase>
+	  				</execution>
+	  			</executions>
+	  		</plugin>
 				<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
 				<plugin>
 					<groupId>org.eclipse.m2e</groupId>
