@@ -15,26 +15,30 @@
  */
 package se.inera.ifv.auth.spi.implementation.hsaws;
 
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.fail;
+
 import org.callistasoftware.netcare.commons.auth.spi.implementation.HSAWebServiceCalls;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.test.context.ActiveProfiles;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-
-/**
- * @author Pär Wenåker
- *
- */
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations="classpath:/auth-sjunet-test.config.xml")
 public class HSAWebServiceCallsTestClient {
+	
+    @Autowired
+    private HSAWebServiceCalls client;
 
-    public static void main(String[] args) {
-        ApplicationContext ctx = new ClassPathXmlApplicationContext(new String[] { "HSAWebServiceCallsTest-applicationContext.xml", "services-config.xml"});
-        HSAWebServiceCalls client = (HSAWebServiceCalls)ctx.getBean("wsCalls");
-        try {
-            client.callPing();
-        } catch (Exception e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-    }
+    @Test
+    public void testPingMethod() throws Exception {
+		try{
+			client.callPing();
+		} catch (Exception ex) {
+			fail();
+			assertNotNull(ex);
+		}
+	}
 }
