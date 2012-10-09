@@ -269,7 +269,7 @@ p{
 }
 #leftMenu {
 	float:left;
-	width:320px;
+	width:260px;
 	position:relative;
 
 	padding:16px 0 18px;
@@ -304,7 +304,7 @@ p{
 	margin:0;
 }
 #leftMenu .listWrapper {
-	padding:10px 15px;
+	padding:10px 0;
 	margin:0;
 	margin-top:-5px;
 	background-color:white;
@@ -321,10 +321,10 @@ p{
 	list-style:none;
 	overflow: auto;
 	padding:0;
-	margin:0 5px;
+	margin:0 15px 0 0;
 }
 #leftMenu #permanent li {
-	height:50px;
+	height:20px;
 	margin:5px auto;
 	overflow:hidden;
 }
@@ -336,13 +336,13 @@ p{
 	height:50px;
 }
 #leftMenu #permanent li h3 {
-	line-height:20px;
+	line-height:18px;
 	padding:10px 20px;
-	font-size:1.2em;
+	font-size:0.9em;
 	font-weight:normal;
-	margin:5px 0;
+	margin:2px 0;
 	margin-left: 0px;
-	padding:15px 0 0 65px;
+	padding:5px 0 0 50px;
 	
 /*
 	-webkit-border-top-right-radius: 5px;
@@ -410,10 +410,10 @@ p{
 }*/
 #leftMenu h2{
 	font-weight: normal;
-	font-size:1.2em;	
+	font-size:1.1em;	
 	border-top: 1px solid #dadada;
 	margin-top:10px;
-	padding-top:15px;
+	padding-top:10px;
 }
 a.icon:hover{
 	text-decoration: none;
@@ -424,7 +424,7 @@ a.icon:hover{
 
 #contentContainer {
 	margin-top:20px;
-	margin-left:360px;
+	margin-left:270px;
 	font-family: "Lucida Grande", Helvetica, Arial;
 }
 
