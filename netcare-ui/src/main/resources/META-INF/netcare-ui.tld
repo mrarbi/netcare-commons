@@ -28,9 +28,95 @@
 	<uri>http://www.callistasoftware.org/netcare/tags</uri>
 	
 	<tag-file>
+		<name>admin-menu</name>
+		<path>/META-INF/tags/admin-menu.tag</path>
+	</tag-file>
+	<tag-file>
+		<name>block-message</name>
+		<path>/META-INF/tags/block-message.tag</path>
+	</tag-file>
+	<tag-file>
+		<name>body</name>
+		<path>/META-INF/tags/body.tag</path>
+	</tag-file>
+	<tag-file>
+		<name>col</name>
+		<path>/META-INF/tags/col.tag</path>
+	</tag-file>
+	<tag-file>
+		<name>content</name>
+		<path>/META-INF/tags/content.tag</path>
+	</tag-file>
+	<tag-file>
+		<name>dateInput</name>
+		<path>/META-INF/tags/dateInput.tag</path>
+	</tag-file>
+	<tag-file>
+		<name>field</name>
+		<path>/META-INF/tags/field.tag</path>
+	</tag-file>
+	<tag-file>
+		<name>form</name>
+		<path>/META-INF/tags/form.tag</path>
+	</tag-file>
+	<tag-file>
+		<name>header</name>
+		<path>/META-INF/tags/header.tag</path>
+	</tag-file>
+	<tag-file>
+		<name>image</name>
+		<path>/META-INF/tags/image.tag</path>
+	</tag-file>
+	<tag-file>
+		<name>js</name>
+		<path>/META-INF/tags/js.tag</path>
+	</tag-file>
+	<tag-file>
+		<name>list-content</name>
+		<path>/META-INF/tags/list-content.tag</path>
+	</tag-file>
+	<tag-file>
+		<name>menu</name>
+		<path>/META-INF/tags/menu.tag</path>
+	</tag-file>
+	<tag-file>
+		<name>message</name>
+		<path>/META-INF/tags/message.tag</path>
+	</tag-file>
+	<tag-file>
+		<name>tags</name>
+		<path>/META-INF/tags/modal.tag</path>
+	</tag-file>
+	<tag-file>
 		<name>page</name>
 		<path>/META-INF/tags/page.tag</path>
 	</tag-file>
-	
-   
+	<tag-file>
+		<name>patient-menu</name>
+		<path>/META-INF/tags/patient-menu.tag</path>
+	</tag-file>
+	<tag-file>
+		<name>report</name>
+		<path>/META-INF/tags/report.tag</path>
+	</tag-file>
+	<tag-file>
+		<name>row</name>
+		<path>/META-INF/tags/row.tag</path>
+	</tag-file>
+	<tag-file>
+		<name>system-administrator-menu</name>
+		<path>/META-INF/tags/system-administrator-menu.tag</path>
+	</tag-file>
+	<tag-file>
+		<name>table</name>
+		<path>/META-INF/tags/table.tag</path>
+	</tag-file>
+	<tag-file>
+		<name>timeContainer</name>
+		<path>/META-INF/tags/timeContainer.tag</path>
+	</tag-file>
+	<tag-file>
+		<name>timeInput</name>
+		<path>/META-INF/tags/timeInput.tag</path>
+	</tag-file>
 </taglib>
