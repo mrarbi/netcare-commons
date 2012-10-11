@@ -36,10 +36,6 @@
 		<path>/META-INF/tags/block-message.tag</path>
 	</tag-file>
 	<tag-file>
-		<name>body</name>
-		<path>/META-INF/tags/body.tag</path>
-	</tag-file>
-	<tag-file>
 		<name>col</name>
 		<path>/META-INF/tags/col.tag</path>
 	</tag-file>
@@ -54,10 +50,6 @@
 	<tag-file>
 		<name>field</name>
 		<path>/META-INF/tags/field.tag</path>
-	</tag-file>
-	<tag-file>
-		<name>form</name>
-		<path>/META-INF/tags/form.tag</path>
 	</tag-file>
 	<tag-file>
 		<name>header</name>
@@ -84,12 +76,8 @@
 		<path>/META-INF/tags/message.tag</path>
 	</tag-file>
 	<tag-file>
-		<name>tags</name>
+		<name>modal</name>
 		<path>/META-INF/tags/modal.tag</path>
-	</tag-file>
-	<tag-file>
-		<name>page</name>
-		<path>/META-INF/tags/page.tag</path>
 	</tag-file>
 	<tag-file>
 		<name>patient-menu</name>

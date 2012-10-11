@@ -22,7 +22,7 @@
 <%@ attribute name="contextPath" required="true" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-
+<!-- mvk:header -->
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>${title}</title>
@@ -35,6 +35,7 @@
 	<script type="text/javascript">
 		var GLOB_CTX_PATH = '${contextPath}';
 	</script>
+	<c:set var="GLOB_CTX_PATH" value="${pageContext.request.contextPath}" />
 	
 	<script type="text/javascript" src="${resourcePath}/js/jquery-1.8.2.min.js"></script>
 	<script type="text/javascript" src="${resourcePath}/js/jquery-ui-1.8.24.custom.min.js"></script>
@@ -42,3 +43,4 @@
 	
 	<jsp:doBody />
 </head>
+<!-- mvk:header / -->
