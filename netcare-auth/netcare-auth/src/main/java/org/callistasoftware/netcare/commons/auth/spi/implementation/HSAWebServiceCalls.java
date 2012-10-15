@@ -92,18 +92,15 @@ public class HSAWebServiceCalls implements InitializingBean {
      * @return
      * @throws Exception 
      */
-    public GetMiuForPersonResponseType callMiuRights(LookupHsaObjectType parameters) throws Exception {
-//        try {
-//            GetMiuForPersonResponseType response = serverInterface.getMiuForPerson(logicalAddressHeader, messageId,
-//                    parameters);
-//            return response;
-//        } catch (Exception ex) {
-//            log.error("Exception={}", ex.getMessage(), ex);
-//            throw new Exception(ex);
-//        }
-        throw new Exception("Code not implemented here yet");
-
-//    	return null;
+    public GetMiuForPersonResponseType callMiuRights(GetMiuForPersonType parameters) throws Exception {
+        try {
+            GetMiuForPersonResponseType response = serverInterface.getMiuForPerson(logicalAddressHeader, messageId,
+                    parameters);
+            return response;
+        } catch (Exception ex) {
+            log.error("Exception={}", ex.getMessage(), ex);
+            throw new Exception(ex);
+        }
     }
 
     /**
@@ -158,6 +155,23 @@ public class HSAWebServiceCalls implements InitializingBean {
             throw new Exception(ex);
        }
     }
+    
+    /**
+     * Method to retrieve attributes for a HoS Person
+     * @param parameters
+     * @return
+     * @throws Exception 
+     */
+    public GetHsaPersonResponseType callGetHsaPerson(GetHsaPersonType parameters) throws Exception {
+        try {
+        	GetHsaPersonResponseType response = serverInterface.getHsaPerson(logicalAddressHeader, messageId,
+                    parameters);
+            return response;
+        } catch (Exception ex) {
+            log.error("Exception={}", ex.getMessage(), ex);
+            throw new Exception(ex);
+       }
+    }
 
    
     private HsaWsResponderInterface getServerInterface(String wsUrl) {
@@ -165,7 +179,6 @@ public class HSAWebServiceCalls implements InitializingBean {
         	log.debug("wsUrl is {}", wsUrl);
             // Get URL to wsdl file
             ClassLoader loader = Thread.currentThread().getContextClassLoader();
-            //TODO: Get this path out of code. Was problematic when changing from 3.8 to 3.14 and will be for future changes if it stays here
             URL wsdlUrl = loader.getResource("schemas/wsdl/HsaWsInteraction_3.14.wsdl");
 
             // Create web service client stub		

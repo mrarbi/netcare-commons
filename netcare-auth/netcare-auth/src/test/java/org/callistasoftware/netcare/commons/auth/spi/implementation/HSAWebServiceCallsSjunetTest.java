@@ -13,7 +13,7 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  */
-package se.inera.ifv.auth.spi.implementation.hsaws;
+package org.callistasoftware.netcare.commons.auth.spi.implementation;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.fail;
@@ -27,7 +27,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations="classpath:/auth-sjunet-test.config.xml")
-public class HSAWebServiceCallsTestClient {
+public class HSAWebServiceCallsSjunetTest {
 	
     @Autowired
     private HSAWebServiceCalls client;

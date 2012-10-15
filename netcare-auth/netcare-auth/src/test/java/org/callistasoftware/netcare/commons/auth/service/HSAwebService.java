@@ -15,8 +15,6 @@
  */
 package org.callistasoftware.netcare.commons.auth.service;
 
-import javax.jws.WebService;
-
 import org.callistasoftware.netcare.commons.auth.hsaws.v3.HsaWsFault;
 import org.callistasoftware.netcare.commons.auth.hsaws.v3.HsaWsResponderInterface;
 import org.callistasoftware.netcare.commons.auth.hsawsresponder.v3.GetCareUnitListResponseType;

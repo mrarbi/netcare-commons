@@ -54,6 +54,7 @@ public class UserPropertiesResolverImpl implements UserPropertiesResolver {
         HosUserInterface hosUser;
         try {
             hosUser = organisationInfoService.getHosPersonFullInfo(user.getHsaId());
+            
         } catch (Exception e) {
             log.debug("Caught an exception {}", e.toString());
             log.debug("Could not get PersonFullInfo from organisation Info service for User HSA-ID={}", user.getHsaId());
@@ -93,5 +94,17 @@ public class UserPropertiesResolverImpl implements UserPropertiesResolver {
         }
         log.debug("Careunits: {}", sb.toString());
     }
+    
+    public String getHsaIdFromPersonNumber(String personNumber){    	
+    	try {
+			String hsaId = organisationInfoService.getHosHsaIdFromPersonNumber(personNumber);
+			log.debug("hsaId returned is {}", hsaId);
+	    	return hsaId;
 
+        } catch (Exception e) {
+            log.debug("Caught an exception {}", e.toString());
+            log.debug("Could not get HsaId from organisation Info service for User personNunber={}", personNumber);
+            throw new SecurityException("authorization.failed");
+		}
+    }
 }

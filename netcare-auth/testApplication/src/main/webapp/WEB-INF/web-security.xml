@@ -35,11 +35,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses />.
     </http>
 
     <authentication-manager/>
-
-<!--     <beans:bean id="userDetailsService"	class="se.inera.ifv.auth.api.implementation.UserDetailsServiceImpl">
-        <beans:property name="userPropertiesResolver">
-            <beans:bean class="se.inera.ifv.auth.api.implementation.UserPropertiesResolverImpl"/>
-        </beans:property>
-    </beans:bean>
- -->
+    
 </beans:beans>

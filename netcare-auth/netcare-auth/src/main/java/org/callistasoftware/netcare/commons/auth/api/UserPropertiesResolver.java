@@ -25,4 +25,6 @@ public interface UserPropertiesResolver {
 
     void resolve(MedicalPersonalUserImpl user);
     
+    String getHsaIdFromPersonNumber(String personNumber);
+    
 }
