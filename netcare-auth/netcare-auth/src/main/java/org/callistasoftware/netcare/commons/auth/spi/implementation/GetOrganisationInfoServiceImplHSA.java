@@ -15,6 +15,8 @@
  */
 package org.callistasoftware.netcare.commons.auth.spi.implementation;
 
+import java.util.List;
+
 import org.callistasoftware.netcare.commons.auth.api.CareUnitInterface;
 import org.callistasoftware.netcare.commons.auth.api.HosUserInterface;
 import org.callistasoftware.netcare.commons.auth.spi.OrganisationInfoService;
@@ -31,6 +33,10 @@ import org.callistasoftware.netcare.commons.auth.hsawsresponder.v3.AttributeValu
 import org.callistasoftware.netcare.commons.auth.hsawsresponder.v3.AttributeValuePairType;
 import org.callistasoftware.netcare.commons.auth.hsawsresponder.v3.ExactType;
 import org.callistasoftware.netcare.commons.auth.hsawsresponder.v3.GetCareUnitResponseType;
+import org.callistasoftware.netcare.commons.auth.hsawsresponder.v3.GetHsaPersonHsaUserType;
+import org.callistasoftware.netcare.commons.auth.hsawsresponder.v3.GetHsaPersonResponseType;
+import org.callistasoftware.netcare.commons.auth.hsawsresponder.v3.GetHsaPersonResponseType.UserInformations;
+import org.callistasoftware.netcare.commons.auth.hsawsresponder.v3.GetHsaPersonType;
 import org.callistasoftware.netcare.commons.auth.hsawsresponder.v3.GetHsaUnitResponseType;
 import org.callistasoftware.netcare.commons.auth.hsawsresponder.v3.HsawsSimpleLookupResponseType;
 import org.callistasoftware.netcare.commons.auth.hsawsresponder.v3.HsawsSimpleLookupType;
@@ -105,6 +111,31 @@ public class GetOrganisationInfoServiceImplHSA implements OrganisationInfoServic
         
         // Return empty string if we didn't find anything
         return "";
+    }
+
+    public String getHosHsaIdFromPersonNumber(String personNumber) throws Exception {
+    	log.debug("Calling HSA in getHosHsaIdFromPersonNummer");
+
+        // Create lookup parameter
+        GetHsaPersonType parameters = new GetHsaPersonType();
+        
+        //SetLookup data
+        parameters.setPersonalIdentityNumber(personNumber);
+
+        // Make call		
+        GetHsaPersonResponseType response = client.callGetHsaPerson(parameters);
+
+        // Read response and pick values
+        UserInformations userInformations = response.getUserInformations();
+        
+        List<GetHsaPersonHsaUserType> userInformationList = userInformations.getUserInformation();
+        
+        //TODO: what to do with multiple users?
+        for(GetHsaPersonHsaUserType hsaUser : userInformationList){
+        	return hsaUser.getHsaIdentity();
+        }
+        
+        throw new Exception("server did not reply with valid HSA ID.");
     }
 
     public HosUserInterface getHosPersonFullInfo(String hosPersonHsaId) throws Exception {

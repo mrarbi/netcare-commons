@@ -1,18 +1,18 @@
-/**
- *    Copyright 2011,2012 Callista Enterprise AB
- *
- *    Licensed under the Apache License, Version 2.0 (the "License");
- *    you may not use this file except in compliance with the License.
- *    You may obtain a copy of the License at
- *
- *        http://www.apache.org/licenses/LICENSE-2.0
- *
- *    Unless required by applicable law or agreed to in writing, software
- *    distributed under the License is distributed on an "AS IS" BASIS,
- *    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *    See the License for the specific language governing permissions and
- *    limitations under the License.
- */
+///**
+// *    Copyright 2011,2012 Callista Enterprise AB
+// *
+// *    Licensed under the Apache License, Version 2.0 (the "License");
+// *    you may not use this file except in compliance with the License.
+// *    You may obtain a copy of the License at
+// *
+// *        http://www.apache.org/licenses/LICENSE-2.0
+// *
+// *    Unless required by applicable law or agreed to in writing, software
+// *    distributed under the License is distributed on an "AS IS" BASIS,
+// *    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// *    See the License for the specific language governing permissions and
+// *    limitations under the License.
+// */
 ///*
 // * Inera Webcert - Sjukintygsapplikation
 // *
@@ -35,10 +35,29 @@
 //package se.inera.ifv.auth.spi.implementation.hsaws;
 //
 //import org.w3.wsaddressing10.AttributedURIType;
-//import se.inera.ifv.hsaws.v3.HsaWsFault;
-//import se.inera.ifv.hsaws.v3.HsaWsResponderInterface;
-//import se.inera.ifv.hsawsresponder.v3.*;
-//import se.inera.ifv.hsawsresponder.v3.GetHsaUnitResponseType.TelephoneNumbers;
+//import org.callistasoftware.netcare.commons.auth.hsaws.v3.*;
+//import org.callistasoftware.netcare.commons.auth.hsawsresponder.v3.AddressType;
+//import org.callistasoftware.netcare.commons.auth.hsawsresponder.v3.GetCareUnitResponseType;
+//import org.callistasoftware.netcare.commons.auth.hsawsresponder.v3.GetHospPersonResponseType;
+//import org.callistasoftware.netcare.commons.auth.hsawsresponder.v3.GetHospPersonType;
+//import org.callistasoftware.netcare.commons.auth.hsawsresponder.v3.GetHsaUnitResponseType;
+//import org.callistasoftware.netcare.commons.auth.hsawsresponder.v3.GetHsaUnitResponseType.TelephoneNumbers;
+//import org.callistasoftware.netcare.commons.auth.hsawsresponder.v3.GetInformationListResponseType;
+//import org.callistasoftware.netcare.commons.auth.hsawsresponder.v3.GetInformationListType;
+//import org.callistasoftware.netcare.commons.auth.hsawsresponder.v3.GetMiuForPersonResponseType;
+//import org.callistasoftware.netcare.commons.auth.hsawsresponder.v3.HsaSystemRolesType;
+//import org.callistasoftware.netcare.commons.auth.hsawsresponder.v3.HsaTitlesType;
+//import org.callistasoftware.netcare.commons.auth.hsawsresponder.v3.HsawsSimpleLookupResponseType;
+//import org.callistasoftware.netcare.commons.auth.hsawsresponder.v3.HsawsSimpleLookupType;
+//import org.callistasoftware.netcare.commons.auth.hsawsresponder.v3.IsAuthorizedToSystemResponseType;
+//import org.callistasoftware.netcare.commons.auth.hsawsresponder.v3.IsAuthorizedToSystemType;
+//import org.callistasoftware.netcare.commons.auth.hsawsresponder.v3.LookupHsaObjectType;
+//import org.callistasoftware.netcare.commons.auth.hsawsresponder.v3.MiuInformationType;
+//import org.callistasoftware.netcare.commons.auth.hsawsresponder.v3.MiuRightsType;
+//import org.callistasoftware.netcare.commons.auth.hsawsresponder.v3.PingResponseType;
+//import org.callistasoftware.netcare.commons.auth.hsawsresponder.v3.PingType;
+//import org.callistasoftware.netcare.commons.auth.hsawsresponder.v3.VpwGetPublicUnitsResponseType;
+//import org.callistasoftware.netcare.commons.auth.hsawsresponder.v3.VpwGetPublicUnitsType;
 //
 //import javax.jws.WebService;
 //import javax.xml.ws.Endpoint;

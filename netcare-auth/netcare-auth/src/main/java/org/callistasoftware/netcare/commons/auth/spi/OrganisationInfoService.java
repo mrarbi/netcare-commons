@@ -46,4 +46,10 @@ public interface OrganisationInfoService {
      */
     public HosUserInterface getHosPersonFullInfo(String hosPersonHsaId) throws Exception;
 
+    /**
+     * Returns hosPersonHsaId.
+     * @param personNumber
+     * @return String
+     */
+    public String getHosHsaIdFromPersonNumber(String personNumber) throws Exception;
 }

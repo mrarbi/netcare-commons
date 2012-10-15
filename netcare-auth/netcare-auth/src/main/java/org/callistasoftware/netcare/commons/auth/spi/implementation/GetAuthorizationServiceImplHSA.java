@@ -31,7 +31,7 @@ import org.springframework.stereotype.Service;
 import org.callistasoftware.netcare.commons.auth.hsawsresponder.v3.GetCareUnitResponseType;
 import org.callistasoftware.netcare.commons.auth.hsawsresponder.v3.GetHsaUnitResponseType;
 import org.callistasoftware.netcare.commons.auth.hsawsresponder.v3.GetMiuForPersonResponseType;
-import org.callistasoftware.netcare.commons.auth.hsawsresponder.v3.LookupHsaObjectType;
+import org.callistasoftware.netcare.commons.auth.hsawsresponder.v3.GetMiuForPersonType;
 import org.callistasoftware.netcare.commons.auth.hsawsresponder.v3.MiuInformationType;
 
 import java.util.ArrayList;
@@ -67,9 +67,9 @@ public class GetAuthorizationServiceImplHSA implements AuthorizationService {
         List<CareUnitInterface> careUnits = new ArrayList<CareUnitInterface>();
 
         // Set hos person hsa ID
-        LookupHsaObjectType parameters = new LookupHsaObjectType();
+        GetMiuForPersonType parameters = new GetMiuForPersonType();
         parameters.setHsaIdentity(hosPersonHsaId);
-
+        
         try {
             GetMiuForPersonResponseType response = client.callMiuRights(parameters);
 

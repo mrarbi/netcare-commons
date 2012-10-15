@@ -1,11 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>se.inera.test</groupId>
-  <artifactId>LoginApplication</artifactId>
+  <groupId>org.callistasoftware.netcare.commons</groupId>
+  <artifactId>testApplication</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>LoginApplication</name>
+  <name>testApplication</name>
   <url>http://maven.apache.org</url>
   <dependencies>
 		
@@ -18,8 +18,8 @@
    	
 	<!-- test-auth -->
 	<dependency>
-		<groupId>se.inera.ifv</groupId>
-		<artifactId>test-auth</artifactId>
+		<groupId>org.callistasoftware.netcare.commons</groupId>
+		<artifactId>netcare-auth</artifactId>
 		<version>1.0-SNAPSHOT</version>
    	</dependency>
     <dependency>
@@ -91,7 +91,7 @@
   
   <build>
   	<plugins>
-  		<plugin>
+<!--   		<plugin>
   			<groupId>org.mortbay.jetty</groupId>
   			<artifactId>jetty-maven-plugin</artifactId>
   			<version>8.1.2.v20120308</version>
@@ -117,7 +117,7 @@
 					</connector>
   				</connectors>
   			</configuration>
-  		</plugin>
+  		</plugin> -->
 		<plugin>
             <groupId>org.apache.tomcat.maven</groupId>
             <artifactId>tomcat7-maven-plugin</artifactId>

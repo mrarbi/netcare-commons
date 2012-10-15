@@ -33,10 +33,6 @@
 	<logger name="org.springframework.web" level="DEBUG" />
 	<logger name="org.springframework.http" level="WARN" />
 
-	<logger name="se.inera.ifv.auth.spi.implementation" level="DEBUG" />
-	<logger name="se.inera.test" level="DEBUG" />
-	
-
 	<root level="DEBUG">
 		<appender-ref ref="STDOUT" />
 	</root>
