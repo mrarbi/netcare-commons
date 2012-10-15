@@ -35,7 +35,7 @@
 	<script type="text/javascript">
 		var GLOB_CTX_PATH = '${contextPath}';
 	</script>
-	<c:set var="GLOB_CTX_PATH" value="${pageContext.request.contextPath}" />
+	<c:set var="GLOB_CTX_PATH" value="${contextPath}" />
 	
 	<script type="text/javascript" src="${resourcePath}/js/jquery-1.8.2.min.js"></script>
 	<script type="text/javascript" src="${resourcePath}/js/jquery-ui-1.8.24.custom.min.js"></script>

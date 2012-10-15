@@ -24,4 +24,4 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="netcare" uri="http://www.callistasoftware.org/netcare/tags"%>
 
-<input name="${name}" type="date" placeholder="<spring:message code="pattern.time" />" class="${classes} timeInput" />
+<input name="${name}" type="text" placeholder="<spring:message code="pattern.time" />" class="${classes} timeInput" />

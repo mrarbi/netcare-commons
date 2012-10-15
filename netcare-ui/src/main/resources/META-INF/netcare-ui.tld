@@ -28,10 +28,6 @@
 	<uri>http://www.callistasoftware.org/netcare/tags</uri>
 	
 	<tag-file>
-		<name>admin-menu</name>
-		<path>/META-INF/tags/admin-menu.tag</path>
-	</tag-file>
-	<tag-file>
 		<name>block-message</name>
 		<path>/META-INF/tags/block-message.tag</path>
 	</tag-file>
@@ -40,20 +36,12 @@
 		<path>/META-INF/tags/col.tag</path>
 	</tag-file>
 	<tag-file>
-		<name>content</name>
-		<path>/META-INF/tags/content.tag</path>
-	</tag-file>
-	<tag-file>
 		<name>dateInput</name>
 		<path>/META-INF/tags/dateInput.tag</path>
 	</tag-file>
 	<tag-file>
 		<name>field</name>
 		<path>/META-INF/tags/field.tag</path>
-	</tag-file>
-	<tag-file>
-		<name>header</name>
-		<path>/META-INF/tags/header.tag</path>
 	</tag-file>
 	<tag-file>
 		<name>image</name>
@@ -68,20 +56,12 @@
 		<path>/META-INF/tags/list-content.tag</path>
 	</tag-file>
 	<tag-file>
-		<name>menu</name>
-		<path>/META-INF/tags/menu.tag</path>
-	</tag-file>
-	<tag-file>
 		<name>message</name>
 		<path>/META-INF/tags/message.tag</path>
 	</tag-file>
 	<tag-file>
 		<name>modal</name>
 		<path>/META-INF/tags/modal.tag</path>
-	</tag-file>
-	<tag-file>
-		<name>patient-menu</name>
-		<path>/META-INF/tags/patient-menu.tag</path>
 	</tag-file>
 	<tag-file>
 		<name>report</name>
@@ -92,19 +72,15 @@
 		<path>/META-INF/tags/row.tag</path>
 	</tag-file>
 	<tag-file>
-		<name>system-administrator-menu</name>
-		<path>/META-INF/tags/system-administrator-menu.tag</path>
-	</tag-file>
-	<tag-file>
 		<name>table</name>
 		<path>/META-INF/tags/table.tag</path>
 	</tag-file>
 	<tag-file>
-		<name>timeContainer</name>
-		<path>/META-INF/tags/timeContainer.tag</path>
-	</tag-file>
-	<tag-file>
 		<name>timeInput</name>
 		<path>/META-INF/tags/timeInput.tag</path>
+	</tag-file>
+	<tag-file>
+		<name>css</name>
+		<path>/META-INF/tags/css.tag</path>
 	</tag-file>
 </taglib>

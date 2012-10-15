@@ -17,9 +17,10 @@
 
 --%>
 <%@ tag language="java" pageEncoding="UTF-8" %>
+<%@ attribute name="resourcePath" required="true" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-	<script type="text/javascript" src="<c:url value='/netcare/resources/js/netcare.js' />"></script>
-	<script type="text/javascript" src="<c:url value='/netcare/resources/js/netcare-ui/Ajax.js' />"></script>
-	<script type="text/javascript" src="<c:url value='/netcare/resources/js/netcare-ui/PageMessages.js' />"></script>
-	<script type="text/javascript" src="<c:url value='/netcare/resources/js/netcare-ui/Util.js' />"></script>
+<script type="text/javascript" src="<c:url value='${resourcePath}/js/netcare-common.js' />"></script>
+<script type="text/javascript" src="<c:url value='${resourcePath}/js/netcare-ui/Util.js' />"></script>
+<script type="text/javascript" src="<c:url value='${resourcePath}/js/netcare-ui/PageMessages.js' />"></script>
+<script type="text/javascript" src="<c:url value='${resourcePath}/js/netcare-ui/Ajax.js' />"></script>

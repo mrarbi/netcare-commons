@@ -25,16 +25,13 @@
 
 <c:choose>
 	<c:when test="${not empty id}">
-		<div id="${id}" class="row">
-	</c:when>
-	<c:otherwise>
-		<div class="row">
-	</c:otherwise>
-</c:choose>
-
-	<div class="span9" style="${style}">
-		<div class="row">
+		<div id="${id}" class="row-fluid" style="${style}">
 			<jsp:doBody />
 		</div>
-	</div>
-</div>
+	</c:when>
+	<c:otherwise>
+		<div class="row-fluid" style="${style}">
+			<jsp:doBody />
+		</div>
+	</c:otherwise>
+</c:choose>
