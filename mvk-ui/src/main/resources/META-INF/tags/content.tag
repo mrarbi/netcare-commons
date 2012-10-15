@@ -32,7 +32,11 @@
 	<div id="inboxDetailWrapper">
 		<div class="wrapper">
 		<div id="maincontainerwrapper">
-			<jsp:doBody />
+			<div class="row-fluid">
+				<div class="span12">
+					<jsp:doBody />
+				</div>
+			</div>
 		</div>
 		<div class="clear"></div>
 	</div>
