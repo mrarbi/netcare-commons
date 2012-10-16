@@ -62,6 +62,12 @@ h1 > a:active {
 	text-decoration: none;
 }
 
+h3.menuHeader {
+	width: 100%;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #eee;
+}
+
 ul.menuList {
 	padding-left: 0px;
 	margin-left: 0px;
@@ -73,6 +79,17 @@ ul.menuList > li {
 	padding-left: 3px;
 	padding-bottom: 5px;
 	list-style-type: none;
+}
+
+#leftMenu #permanent li img {
+	width: 16px;
+	height: 16px;
+	padding-right: 10px;
+}
+
+#leftMenu #permanent li a:hover {
+	color: #fff;
+	background-color: #008391;
 }
 
 li.ui-menu-item,
@@ -87,20 +104,8 @@ table tbody tr td {
 	vertical-align: middle;
 }
 
-h3.menuHeader {
-	width: 100%;
-	margin-bottom: 10px;
-	border-bottom: 1px solid #eee;
-}
-
 fieldset > legend {
 	margin-bottom: 10px;
-}
-
-#workWith {
-	border: 1px solid #eee;
-	margin-bottom: 10px;
-	background-color: #FDF5D9;
 }
 
 h1 {
