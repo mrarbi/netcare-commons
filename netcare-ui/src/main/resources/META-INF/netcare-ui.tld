@@ -52,20 +52,12 @@
 		<path>/META-INF/tags/js.tag</path>
 	</tag-file>
 	<tag-file>
-		<name>list-content</name>
-		<path>/META-INF/tags/list-content.tag</path>
-	</tag-file>
-	<tag-file>
 		<name>message</name>
 		<path>/META-INF/tags/message.tag</path>
 	</tag-file>
 	<tag-file>
 		<name>modal</name>
 		<path>/META-INF/tags/modal.tag</path>
-	</tag-file>
-	<tag-file>
-		<name>report</name>
-		<path>/META-INF/tags/report.tag</path>
 	</tag-file>
 	<tag-file>
 		<name>row</name>
