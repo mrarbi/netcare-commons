@@ -81,6 +81,10 @@ ul.menuList > li {
 	list-style-type: none;
 }
 
+#leftMenu ul {
+	margin: 0 0 0 0;
+}
+
 #leftMenu #permanent li img {
 	width: 16px;
 	height: 16px;

@@ -17,7 +17,25 @@
 
 --%>
 <%@ tag language="java" pageEncoding="UTF-8" body-content="scriptless" isELIgnored="false" %>
+<%@ attribute name="menuText" required="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
+<c:if test="${menuText == null}">
+	<c:set var="menuText" value="Meny" />
+</c:if>
 
+<div id="menuContainer">
+	<div id="leftMenu">
+		<div class="wrapper">
+			<div class="listWrapper">
+				<h2 class="assistiveObject">Fasta tjänster</h2>
+				<ul id="permanent">
+					<jsp:doBody />
+				</ul>
+			</div>
+		</div>
+		<div class="topBorder"></div>
+		<a class="toggleMenuButton onlyOnNarrow bold">${menuText}</a>
+	</div>
+</div>
 		
