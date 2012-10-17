@@ -41,6 +41,15 @@
 	<script type="text/javascript" src="${contextPath}${resourcePath}/js/jquery-ui-1.8.24.custom.min.js"></script>
 	<script type="text/javascript" src="${contextPath}${resourcePath}/js/bootstrap-2.2.1.min.js"></script>
 	
+	<script type="text/javascript" src="${contextPath}${resourcePath}/js/mvk-ui.js"></script>
+	<script type="text/javascript">
+	
+		$(function() {
+			MVK.MENU.init();
+		});
+	
+	</script>
+	
 	<jsp:doBody />
 </head>
 <!-- mvk:header / -->
