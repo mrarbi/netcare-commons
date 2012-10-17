@@ -29,11 +29,11 @@
 		http://cxf.apache.org/transports/http/configuration http://cxf.apache.org/schemas/configuration/http-conf.xsd
         http://cxf.apache.org/configuration/security http://cxf.apache.org/schemas/configuration/security.xsd">
         
-    <import resource="classpath:META-INF/cxf/cxf.xml" />
+    <import resource="classpath:META-INF/cxf/cxf.xml" /><!-- 
     <import resource="classpath:META-INF/cxf/cxf-extension-soap.xml" />
     <import resource="classpath:META-INF/cxf/cxf-extension-http.xml" />
     <import resource="classpath:META-INF/cxf/cxf-extension-http-jetty.xml" />
-    
+     -->
 	<context:annotation-config />
 	
 	<context:property-placeholder location="classpath:/auth.config.properties"/>
