@@ -28,18 +28,18 @@
 	<title>${title}</title>
 	
 	<link rel="icon" href="<c:url value="/favicon.ico" />" type="image/vnd.microsoft.icon"/>
-	<link rel="stylesheet" href="${resourcePath}/css/bootstrap-2.2.1.min.css" />
-	<link rel="stylesheet" href="${resourcePath}/css/jquery-ui-1.8.24.custom.css" />
-	<link rel="stylesheet" href="${resourcePath}/css/mvk-ui.css" />
+	<link rel="stylesheet" href="${contextPath}${resourcePath}/css/bootstrap-2.2.1.min.css" />
+	<link rel="stylesheet" href="${contextPath}${resourcePath}/css/jquery-ui-1.8.24.custom.css" />
+	<link rel="stylesheet" href="${contextPath}${resourcePath}/css/mvk-ui.css" />
 	
 	<script type="text/javascript">
 		var GLOB_CTX_PATH = '${contextPath}';
 	</script>
 	<c:set var="GLOB_CTX_PATH" value="${contextPath}" />
 	
-	<script type="text/javascript" src="${resourcePath}/js/jquery-1.8.2.min.js"></script>
-	<script type="text/javascript" src="${resourcePath}/js/jquery-ui-1.8.24.custom.min.js"></script>
-	<script type="text/javascript" src="${resourcePath}/js/bootstrap-2.2.1.min.js"></script>
+	<script type="text/javascript" src="${contextPath}${resourcePath}/js/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="${contextPath}${resourcePath}/js/jquery-ui-1.8.24.custom.min.js"></script>
+	<script type="text/javascript" src="${contextPath}${resourcePath}/js/bootstrap-2.2.1.min.js"></script>
 	
 	<jsp:doBody />
 </head>
