@@ -49,7 +49,10 @@
 			<cxf:logging />
 		</cxf:features>
 	</cxf:bus>
-
-	<http:conduit name="{urn:riv:hsa:HsaWs:3}HsaWsResponderPort.http-conduit">
-	</http:conduit>
+	
+	<beans profile="http">
+		<http:conduit name="{urn:riv:hsa:HsaWs:3}HsaWsResponderPort.http-conduit">
+		</http:conduit>
+	</beans>
+	
 </beans>
