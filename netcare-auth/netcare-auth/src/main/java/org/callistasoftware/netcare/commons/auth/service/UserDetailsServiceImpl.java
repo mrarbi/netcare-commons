@@ -20,6 +20,7 @@ import org.callistasoftware.netcare.commons.auth.api.implementation.MedicalPerso
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.dao.DataAccessException;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -44,6 +45,9 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     @Autowired
     private UserPropertiesResolver userPropertiesResolver;
 
+    @Value("${generic.loggedin.role}")
+    private String loggedInRole;
+
     /* (non-Javadoc)
      * @see org.springframework.security.core.userdetails.UserDetailsService#loadUserByUsername(java.lang.String)
      */
@@ -54,7 +58,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         
         Collection<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
 
-        authorities.add(new SimpleGrantedAuthority("ROLE_USER"));
+        authorities.add(new SimpleGrantedAuthority(loggedInRole));
         
         MedicalPersonalUserImpl user = new MedicalPersonalUserImpl(hsaId, true, true, true, true, authorities);
         userPropertiesResolver.resolve(user);

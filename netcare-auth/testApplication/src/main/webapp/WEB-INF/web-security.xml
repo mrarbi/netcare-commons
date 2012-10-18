@@ -30,7 +30,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses />.
 	<http security="none" pattern="/web/resources/**" />
 
     <http auto-config="false">
-        <intercept-url pattern="/web/hi" access="ROLE_USER" requires-channel="https"/>
+        <intercept-url pattern="/web/hi" access="ROLE_AUTHENTICATED" requires-channel="https"/>
+        <!--
+        The regex in subject-principal-regex grabs certificate serial number and passes it to 
+        loadUserByUsername method 
+        of userDetailsServiceImpl class 
+        in package org.callistasoftware.netcare.commons.auth.service
+        That class implements Spring security's UserDetailsService
+        -->
         <x509 subject-principal-regex="SERIALNUMBER=([^=,]*)" user-service-ref="userDetailsServiceImpl"/>
     </http>
 
