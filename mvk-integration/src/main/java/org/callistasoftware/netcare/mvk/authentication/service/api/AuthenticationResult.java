@@ -30,7 +30,7 @@ public interface AuthenticationResult {
 	 * authentication request
 	 * @return
 	 */
-	boolean isCareGiver();
+	boolean isCareActor();
 	
 	/**
 	 * The hsa id of the care giver's care unit

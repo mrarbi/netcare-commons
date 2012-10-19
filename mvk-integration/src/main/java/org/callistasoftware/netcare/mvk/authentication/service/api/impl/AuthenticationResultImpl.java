@@ -23,21 +23,21 @@ import org.callistasoftware.netcare.mvk.authentication.service.api.Authenticatio
 public class AuthenticationResultImpl implements AuthenticationResult {
 
 	private final String username;
-	
+
 	private String careUnitHsaId;
 	private String careUnitName;
-	
-	private final boolean caregiver;
-	
-	AuthenticationResultImpl(final String username, final boolean careGiver) {
+
+	private final boolean careActor;
+
+	AuthenticationResultImpl(final String username, final boolean careActor) {
 		this.username = username;
-		this.caregiver = careGiver;
+		this.careActor = careActor;
 	}
-	
+
 	AuthenticationResultImpl(final ValidateIdResponseType response) {
 		this(response.getSsoobject().getUserId(), response.getSsoobject().getUserType().equals("VA"));
-		
-		if (isCareGiver()) {
+
+		if (isCareActor()) {
 			this.careUnitHsaId = response.getSsoobject().getHealthcareFacility().getHealthcareFacilityId();
 			this.careUnitName = response.getSsoobject().getHealthcareFacility().getHealthcareFacilityName();
 		} else {
@@ -45,33 +45,34 @@ public class AuthenticationResultImpl implements AuthenticationResult {
 			this.careUnitName = null;
 		}
 	}
-	
+
 	public static AuthenticationResult createFromResponse(final ValidateIdResponseType response) {
 		return new AuthenticationResultImpl(response);
 	}
-	
+
 	public static AuthenticationResult newPatient(final String civicRegistrationNumber) {
 		return new AuthenticationResultImpl(civicRegistrationNumber, false);
 	}
-	
-	public static AuthenticationResult newCareGiver(final String hsaId, final String careUnitHsaId, final String careUnitName) {
+
+	public static AuthenticationResult newCareActor(final String hsaId, final String careUnitHsaId,
+			final String careUnitName) {
 		final AuthenticationResultImpl dto = new AuthenticationResultImpl(hsaId, true);
 		dto.setCareUnitHsaId(careUnitHsaId);
 		dto.setCareUnitName(careUnitName);
-		
+
 		return dto;
 	}
 
 	@Override
-	public boolean isCareGiver() {
-		return this.caregiver;
+	public boolean isCareActor() {
+		return this.careActor;
 	}
 
 	@Override
 	public String getCareUnitHsaId() {
 		return this.careUnitHsaId;
 	}
-	
+
 	void setCareUnitHsaId(final String careUnitHsaId) {
 		this.careUnitHsaId = careUnitHsaId;
 	}
@@ -80,7 +81,7 @@ public class AuthenticationResultImpl implements AuthenticationResult {
 	public String getCareUnitName() {
 		return this.careUnitName;
 	}
-	
+
 	void setCareUnitName(final String careUnitName) {
 		this.careUnitName = careUnitName;
 	}

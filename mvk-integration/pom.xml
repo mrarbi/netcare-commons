@@ -5,7 +5,7 @@
   <name>Netcare Commons - MVK Integration</name>
   <description>Authentication Module for MVK</description>
   
-  <version>1.0</version>
+  <version>1.1-SNAPSHOT</version>
   
   <properties>
   	<project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>

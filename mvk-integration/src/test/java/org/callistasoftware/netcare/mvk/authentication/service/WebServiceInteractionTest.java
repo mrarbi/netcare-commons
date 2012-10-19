@@ -50,7 +50,7 @@ public class WebServiceInteractionTest extends TestCase {
 		final AuthenticationRequest req = AuthenticationRequestImpl.newAuthenticationRequest(token);
 		final AuthenticationResult result = this.authService.authenticate(req);
 		
-		assertFalse(result.isCareGiver());
+		assertFalse(result.isCareActor());
 		assertEquals("191212121212", result.getUsername());
 	}
 }
