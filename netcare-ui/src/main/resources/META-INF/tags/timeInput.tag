@@ -18,10 +18,11 @@
 --%>
 <%@ tag language="java" pageEncoding="UTF-8" body-content="empty" %>
 <%@ attribute name="name" required="true" %>
+<%@ attribute name="timePattern" required="false" %>
 <%@ attribute name="classes" required="false" %>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="netcare" uri="http://www.callistasoftware.org/netcare/tags"%>
 
-<input name="${name}" type="text" placeholder="<spring:message code="pattern.time" />" class="${classes} timeInput" />
+<input name="${name}" type="text" placeholder="${timePattern}" class="${classes} timeInput" />
