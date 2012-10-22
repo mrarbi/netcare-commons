@@ -68,10 +68,10 @@ public class MvkPreAuthenticationServiceTest {
 		
 	}
 	
-	private class CareGiver extends User {
+	private class CareActor extends User {
 
-		public CareGiver() {
-			super("caregiver", "", true, true, true, true, Collections.singletonList(createRole("ROLE_ADMIN")));
+		public CareActor() {
+			super("careactor", "", true, true, true, true, Collections.singletonList(createRole("ROLE_ADMIN")));
 		}
 
 		/**
@@ -82,11 +82,11 @@ public class MvkPreAuthenticationServiceTest {
 	}
 	
 	@Test
-	public void testAuthWhenAlreadyAuthenticatedAsCareGiver() throws Exception {
+	public void testAuthWhenAlreadyAuthenticatedAsCareActor() throws Exception {
 		final MvkPreAuthenticationServiceTestCallback cb = Mockito.mock(MvkPreAuthenticationServiceTestCallback.class);
 		final PreAuthenticatedAuthenticationToken token = Mockito.mock(PreAuthenticatedAuthenticationToken.class);
 		
-		final CareGiver cg = new CareGiver();
+		final CareActor cg = new CareActor();
 		
 		Mockito.when(token.getPrincipal()).thenReturn(cg);
 		Mockito.when(cb.verifyPrincipal(token.getPrincipal())).thenReturn(cg);
@@ -94,7 +94,7 @@ public class MvkPreAuthenticationServiceTest {
 		this.service.setCallback(cb);
 		UserDetails details = this.service.loadUserDetails(token);
 		assertNotNull(details);
-		assertTrue(details instanceof CareGiver);
+		assertTrue(details instanceof CareActor);
 		
 		/*
 		 * Verifications
@@ -149,20 +149,20 @@ public class MvkPreAuthenticationServiceTest {
 	}
 	
 	@Test
-	public void testAuthForCareGiver() throws Exception {
+	public void testAuthForCareActor() throws Exception {
 		final MvkPreAuthenticationServiceTestCallback cb = Mockito.mock(MvkPreAuthenticationServiceTestCallback.class);
 		final PreAuthenticatedAuthenticationToken token = Mockito.mock(PreAuthenticatedAuthenticationToken.class);
 		
 		final AuthenticationResult fromMvk = Mockito.mock(AuthenticationResult.class);
 		
 		Mockito.when(token.getPrincipal()).thenReturn(fromMvk);
-		Mockito.when(cb.lookupPrincipal(fromMvk)).thenReturn(new CareGiver());
+		Mockito.when(cb.lookupPrincipal(fromMvk)).thenReturn(new CareActor());
 		
 		this.service.setCallback(cb);
 		final UserDetails details = this.service.loadUserDetails(token);
 		
 		assertNotNull(details);
-		assertTrue(details instanceof CareGiver);
+		assertTrue(details instanceof CareActor);
 		
 		Mockito.verify(cb, Mockito.times(0)).verifyPrincipal(token.getPrincipal());
 		Mockito.verify(cb, Mockito.times(1)).lookupPrincipal(fromMvk);

@@ -52,7 +52,7 @@ public class MvkTokenServiceImpl implements MvkTokenService {
 	}
 
 	@Override
-	public String createAuthenticationTokenForCareGiver(String userId,
+	public String createAuthenticationTokenForCareActor(String userId,
 			String careUnitHsaId, String careUnitName) {
 		return this.createAuthenticationToken(userId, "VARDAKTOR", "HSAID", careUnitHsaId, careUnitName);
 	}

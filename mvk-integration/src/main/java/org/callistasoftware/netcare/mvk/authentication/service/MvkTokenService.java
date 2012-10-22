@@ -33,5 +33,5 @@ public interface MvkTokenService {
 	 * @param careUnitName
 	 * @return
 	 */
-	String createAuthenticationTokenForCareGiver(final String userId, final String careUnitHsaId, final String careUnitName);
+	String createAuthenticationTokenForCareActor(final String userId, final String careUnitHsaId, final String careUnitName);
 }
