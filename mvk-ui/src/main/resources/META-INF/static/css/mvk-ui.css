@@ -915,7 +915,7 @@ ul#inboxDetailList li.caseDetail .date {
 	margin-left:0.8em;
 }
 
-/*FormulŠr Vilkor text */
+/*Formulï¿½r Vilkor text */
 .villkor .clearfix {
     display: block;
 	height: 1%;
@@ -1256,7 +1256,7 @@ ul#inboxDetailList li.caseDetail .date {
 	.inboxCase.unread a {
 		height:60px;
 	}
-	/*************** bestŠlnningsportal *****/
+	/*************** bestï¿½lnningsportal *****/
 	#contactHeader{
     	width: 92%;
 	}
@@ -1282,7 +1282,7 @@ smaller than 320
 	#toolsbar li#backBox {
 		width: 79%;
 	}
-	/**** €rende lista ************************/
+	/**** ï¿½rende lista ************************/
 	#contentContainer h1 {
     	/*font-size: 130%;*/
     	margin-bottom: 10px;
@@ -1300,7 +1300,7 @@ smaller than 320
     #ajaxCalendar input {
     	margin-bottom: 0px;
     }	
-	/*************** Fšrnya recept *************/
+	/*************** Fï¿½rnya recept *************/
 	/*input, select, textarea {
     	font-size: 85%;
 	}
@@ -1456,7 +1456,7 @@ smaller than 960
 	html > body #centerareabeigebg {
         width: 100%;
 	}
-	/************ Fšrnya recept *********/
+	/************ Fï¿½rnya recept *********/
 	/*.centerareatext {
         width: 96%;
 	}
@@ -1495,4 +1495,455 @@ smaller than 960
 	.villkor {
 		width:54%;
 	}
+}
+
+
+
+
+/*********************************
+ * BoxShadowContainer
+ *********************************/
+ 
+ .containerBoxShadow>.bottom,
+ .containerBoxShadow>.top {
+	position: relative;
+	padding: 0 3px;
+}
+
+.containerBoxShadow>.top>.left,
+.containerBoxShadow>.top>.right,
+.containerBoxShadow>.top>.wrap,
+.containerBoxShadow>.bottom>.left,
+.containerBoxShadow>.bottom>.right,
+.containerBoxShadow>.bottom>.wrap {
+	background-image: url('../img/containerBackgrounds/boxShadowTopAndBottom.png');
+	background-repeat: no-repeat;
+	height: 2px;
+	width: 3px;
+}
+
+.containerBoxShadow>.bottom>.left,
+.containerBoxShadow>.bottom>.right,
+.containerBoxShadow>.bottom>.wrap {
+	height: 4px;
+}
+
+.containerBoxShadow>.top>.left,
+.containerBoxShadow>.bottom>.left {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.containerBoxShadow>.top>.right,
+.containerBoxShadow>.bottom>.right {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.containerBoxShadow>.top>.wrap {
+	background-repeat: repeat-x;
+	background-position: 0 -2px;
+	width: 100%;
+}
+
+.containerBoxShadow>.top>.left {
+	background-position: 0 0;
+}
+
+.containerBoxShadow>.top>.right {
+	background-position: 0 -4px;
+}
+
+.containerBoxShadow>.bottom>.wrap {
+	background-position: 0 -10px;
+	background-repeat: repeat-x;
+	width: 100%;
+}
+
+.containerBoxShadow>.bottom>.left {
+	background-position: 0 -6px;
+}
+
+.containerBoxShadow>.bottom>.right {
+	background-position: 0 -14px;
+}
+
+.containerBoxShadow>.wrap {
+	padding-right: 3px;
+	background-image:
+		url('../img/containerBackgrounds/boxShadowBodySec.png');
+	background-repeat: repeat-y;
+	background-position: right top;
+}
+
+.containerBoxShadow>.wrap>.boxShadowBody {
+	background-image:
+		url('../img/containerBackgrounds/boxShadowBodyMain.png');
+	background-position: left;
+	background-repeat: repeat-y;
+	padding: 0px 0px;
+	position: relative;
+	overflow: hidden;
+}
+
+/* Container: Grey */
+.containerBoxShadow.grey > .top > .left,
+.containerBoxShadow.grey > .top > .right,
+.containerBoxShadow.grey > .top > .wrap,
+.containerBoxShadow.grey > .bottom > .left,
+.containerBoxShadow.grey > .bottom > .right,
+.containerBoxShadow.grey > .bottom > .wrap {
+	background-image:url('../img/containerBackgrounds/boxShadowTopAndBottom_grey.png');
+}
+
+.containerBoxShadow.grey > .wrap {
+	background-image:url('../img/containerBackgrounds/boxShadowBodySec_grey.png');
+}
+
+.containerBoxShadow.grey > .wrap > .boxShadowBody {
+	background-image:url('../img/containerBackgrounds/boxShadowBodyMain_grey.png');
+} 
+
+/* Container: PaperSheet */
+.containerBoxShadow.paperSheet>.wrap>.boxShadowBody {
+	padding: 0px 3.3%;
+}
+
+.containerBoxShadow.paperSheet>.bottom {
+	height: 17px;
+	padding: 0 220px;
+}
+
+.containerBoxShadow.paperSheet>.bottom>.left,
+.containerBoxShadow.paperSheet>.bottom>.right {
+	height: 17px;
+	width: 220px;
+	background-image:url('../img/containerBackgrounds/paperSheetBottom.png');
+}
+
+.containerBoxShadow.paperSheet>.bottom>.left {
+	background-position: top left;
+}
+
+.containerBoxShadow.paperSheet>.bottom>.right {
+	background-position: top right;
+}
+
+/* Container: PaperSlip */
+.containerBoxShadow.paperSlip>.bottom {
+	padding-right: 158px;
+	height: 5px;
+}
+
+.containerBoxShadow.paperSlip>.bottom>.right {
+	background-image: url('../img/containerBackgrounds/paperSlipBottomRight.png');
+	background-position: right top;
+	width: 158px;
+	height: 11px;
+}
+.containerBoxShadow.paperSlip.grey >.bottom > .right {
+	background-image: url('../img/containerBackgrounds/paperSlipBottomRight_grey.png');
+}
+/******* Container: greyBluePaperSheet *******/
+.containerBoxShadow.greyBluePaperSheet>.top {
+	display: none;
+}
+
+.containerBoxShadow.greyBluePaperSheet>.wrap {
+	background: none;
+}
+
+.containerBoxShadow.greyBluePaperSheet>.wrap>.boxShadowBody {
+	padding: 0px 3.3%;
+	background: none;
+	background-color: #f2f2f2;
+	border: none;
+	-webkit-border-top-right-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-moz-border-radius-topright: 5px;
+	-moz-border-radius-bottomright: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.containerBoxShadow.greyBluePaperSheet>.bottom {
+	height: 17px;
+	padding: 0;
+}
+
+.containerBoxShadow.greyBluePaperSheet>.bottom>.left,
+.containerBoxShadow.greyBluePaperSheet>.bottom>.right
+	{
+	background-image: url('../img/containerBackgrounds/paperSheetBottom.png');
+	height: 17px;
+	width: 220px;
+}
+
+.containerBoxShadow.greyBluePaperSheet>.bottom>.wrap {
+	display: none;
+}
+
+.containerBoxShadow.greyBluePaperSheet>.bottom>.left {
+	display: none;
+}
+
+.containerBoxShadow.greyBluePaperSheet>.bottom>.right {
+	background-position: right -3px;
+	margin-right: 3%;
+}
+
+/*************** Container: Frame *******************/
+.containerBoxShadow.frame>.top>.left,
+.containerBoxShadow.frame>.top>.right,
+.containerBoxShadow.frame>.top>.wrap,
+.containerBoxShadow.frame>.bottom>.left,
+.containerBoxShadow.frame>.bottom>.right,
+.containerBoxShadow.frame>.bottom>.wrap {
+	background-image: url('../img/containerBackgrounds/frameTopAndBottom.png');
+	background-repeat: no-repeat;
+	height: 16px;
+	width: 17px;
+}
+
+.containerBoxShadow.frame>.wrap {
+	padding-right: 3px;
+	background-image: url('../img/containerBackgrounds/frameBodySec.png');
+	background-repeat: repeat-y;
+	background-position: right top;
+}
+
+.containerBoxShadow.frame>.wrap>.boxShadowBody {
+	background-image: url('../img/containerBackgrounds/frameBodyMain.png');
+	background-position: left;
+	background-repeat: repeat-y;
+	padding: 0 14px 0px;
+	position: relative;
+	overflow: hidden;
+}
+
+.containerBoxShadow.frame>.bottom,
+.containerBoxShadow.frame>.top {
+	position: relative;
+	padding: 0 17px;
+}
+
+.containerBoxShadow.frame>.bottom>.left,
+.containerBoxShadow.frame>.bottom>.right,
+.containerBoxShadow.frame>.bottom>.wrap {
+	height: 17px;
+}
+
+.containerBoxShadow.frame>.top>.left,
+.containerBoxShadow.frame>.bottom>.left {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.containerBoxShadow.frame>.top>.right,
+.containerBoxShadow.frame>.bottom>.right {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.containerBoxShadow.frame>.top>.wrap {
+	background-repeat: repeat-x;
+	background-position: 0 -17px;
+	width: 100%;
+}
+
+.containerBoxShadow.frame>.top>.left {
+	background-position: 0 0;
+}
+
+.containerBoxShadow.frame>.top>.right {
+	background-position: 0 -35px;
+}
+
+.containerBoxShadow.frame>.bottom>.wrap {
+	background-position: 0 -75px;
+	background-repeat: repeat-x;
+	width: 100%;
+}
+/*** start ***/
+.containerBoxShadow.frame>.bottom>.left {
+	background-position: 0 -55px;
+}
+
+.containerBoxShadow.frame>.bottom>.right {
+	background-position: 0 -96px;
+}
+.containerBoxShadow.frame.left{
+	width: 49%;
+	float: left;
+}
+
+.containerBoxShadow.frame.left.fullWidth{
+	width: 100%;
+	float: left;
+}
+
+.containerBoxShadow.frame.right{
+	width: 49%;
+	float: right;
+}
+
+/*********************************
+ * ItemList
+ *********************************/
+ 
+ ul.itemList {
+	list-style: none;
+	margin: 0 0 0 0;
+	margin-left: 0px;
+	padding: 0;
+}
+
+ul.itemList>li.item {
+	margin: 0;
+}
+
+ul.itemList>li.item.withIcon .listItemBase {
+	padding-left: 55px;
+	overflow: hidden;
+	min-height: 65px;
+}
+
+ul.itemList>li.item .boxShadowBody {
+	padding-left: 15px;
+}
+
+ul.itemList>li.item.withIcon .boxShadowBody {
+	padding-left: 0px;
+}
+
+ul.itemList>li.item.withNavigation .boxShadowBody {
+	padding-right: 40px;
+}
+
+ul.itemList>li.item .listItemBase h3,ul.itemList>li.item .listItemBase h4 {
+	margin: 5px 0;
+	color: #008391;
+	font-size: 0.9375em;
+	font-weight: bold;
+}
+
+li.item .subRow {
+	font-size: 0.9375em;
+}
+
+ul.itemList > li.item.withDetail .listItemBody {
+	background-image:none;
+}
+ul.itemList > .item.subRowOnTop.withDetail .mainBody {
+	padding-top: 1.5em;
+	padding-bottom: 5px;
+}
+ul.itemList > .item.subRowOnTop.withDetail .subRow {
+	top: 0.8em;
+}
+
+ul.itemList > li.item .headerWrapper,
+ul.itemList > li.item .togglerTarget {
+	padding-left:40px;
+}
+
+ul.itemList > li.item .headerWrapper {
+	border-top:1px solid #ccc;
+}
+
+ul.itemList > li.item .headerWrapper.open {
+	border-bottom:1px solid #ccc;
+}
+
+
+li.item a.mvkToggler {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	display: block;
+	width: 40px;
+	height: 100%;
+	padding:0;
+}
+
+li.item .itemNavigation {
+	position: absolute;
+	right: 0px;
+	top: 0;
+	display: block;
+	background-image: url('../img/listNavigationBgBlue.png');
+	background-position: center center;
+	background-repeat: no-repeat;
+	width: 40px;
+	height: 100%;
+	font-size: 0.975em
+}
+
+li.item a.moTile{
+	cursor: pointer;
+	background-image: url('../img/listNavigationBgDarkBlue.png');
+}
+
+li.item .listItemBody {
+	background-image: url('../img/listItemBodyBg.png');
+	background-position: right top;
+	background-repeat: repeat-y;
+	overflow: auto;
+	padding-bottom: 10px;
+}
+
+li.item .listItemBody .facilityResourceInfo{
+	font-size: 0.8em;
+	padding-left: 55px;
+	font-style: italic;
+}
+
+li.item .mainBody {
+	padding-bottom: 10px;
+	padding-top: 10px;
+	overflow: hidden;
+	position: relative;
+}
+
+li.item .itemStateText {
+	position: absolute;
+	display: block;
+	top: 0px;
+	right: 60px;
+	padding-bottom: 3px;
+	font-size: 0.75em;
+	font-weight: bold;
+	background-image: url('../img/shadow-btn.png');
+	background-position: bottom right;
+	background-repeat: no-repeat;
+}
+
+li.item .itemStateText>.wrapper {
+	padding: 5px 13px;
+	display: block;
+	background-color: #fabd17;
+	background-image: url('../img/stateTextBg.png');
+	background-position: right center;
+	background-repeat: repeat-y;
+}
+
+/*** Disabled item ***/
+
+ul.itemList > li.item.disabled h3,
+ul.itemList > li.item.disabled h4 {
+	color:grey;
+}
+
+li.item.disabled .itemNavigation {
+	background-image:url('../img/listNavigationBg.png');
 }
