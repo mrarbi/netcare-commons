@@ -71,5 +71,15 @@
 		<name>content</name>
 		<path>/META-INF/tags/content.tag</path>
 	</tag-file>
+	
+	<tag-file>
+		<name>touch-list</name>
+		<path>/META-INF/tags/touch-list.tag</path>
+	</tag-file>
+	
+	<tag-file>
+		<name>touch-item</name>
+		<path>/META-INF/tags/touch-item.tag</path>
+	</tag-file>
 	      
 </taglib>
