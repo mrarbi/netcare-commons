@@ -1,4 +1,4 @@
-package se.inera.test;
+package org.callistasoftware.netcare.commons.saml.testApplication.web.controller.test;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

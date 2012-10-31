@@ -1,4 +1,4 @@
-package se.inera.test.web.controller;
+package org.callistasoftware.netcare.commons.saml.testApplication.web.controller;
 
 //import org.callistasoftware.netcare.commons.auth.api.implementation.MedicalPersonalUserImpl;
 //import org.springframework.security.core.context.SecurityContextHolder;

@@ -32,7 +32,7 @@
 	<mvc:default-servlet-handler/>
 	
 	<context:annotation-config />
-	<context:component-scan base-package="se.inera.test.web.controller" />
+	<context:component-scan base-package="org.callistasoftware.netcare.commons.saml.testApplication.web.controller, org.springframework.security.saml" />
 	
 	<mvc:resources location="/resources/, classpath:/META-INF/web-resources/" mapping="/resources/**" />
 	
