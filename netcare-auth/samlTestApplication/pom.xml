@@ -29,21 +29,10 @@
 		<version>1.0-SNAPSHOT</version>
    	</dependency>
   	<dependency>
-  		<groupId>javax</groupId>
-  		<artifactId>javaee-web-api</artifactId>
-			<version>6.0</version>
-  	</dependency>
-  	<dependency>
   		<groupId>org.springframework</groupId>
   		<artifactId>spring-web</artifactId>
 		<version>${spring.version}</version>
   	</dependency>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
 	<dependency>
 		<groupId>org.springframework.security</groupId>
 		<artifactId>spring-security-config</artifactId>
@@ -69,7 +58,7 @@
    	<dependency>
 		<groupId>org.slf4j</groupId>
 		<artifactId>slf4j-api</artifactId>
-		<version>1.6.1</version>
+		<version>1.6.6</version>
 	</dependency>
 	<dependency>
 		<groupId>javax.servlet</groupId>
@@ -77,20 +66,9 @@
 		<version>2.5</version>
 	</dependency>
 	<dependency>
-		<groupId>jstl</groupId>
-		<artifactId>jstl</artifactId>
-		<version>1.2</version>
-	</dependency>
-
-	<dependency>
-	    <groupId>log4j</groupId>
-	    <artifactId>log4j</artifactId>
-	    <version>1.2.16</version>
-	</dependency>
-	<dependency>
 	    <groupId>org.slf4j</groupId>
 	    <artifactId>jcl-over-slf4j</artifactId>
-	    <version>1.6.1</version>
+	    <version>1.6.6</version>
 	</dependency>
 	<dependency>
     	<groupId>ch.qos.logback</groupId>
@@ -98,14 +76,9 @@
 	    <version>1.0.6</version>
 	</dependency>
 	<dependency>
-	    <groupId>ch.qos.logback</groupId>
-	    <artifactId>logback-core</artifactId>
-	    <version>1.0.6</version>
-	</dependency>
-	<dependency>
-	    <groupId>ch.qos.logback</groupId>
-	    <artifactId>logback-access</artifactId>
-	    <version>1.0.6</version>
+	    <groupId>junit</groupId>
+	    <artifactId>junit</artifactId>
+	    <version>4.10</version>
 	</dependency>
   </dependencies>
   
