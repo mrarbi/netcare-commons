@@ -29,7 +29,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses />.
 	
     <context:property-placeholder location="classpath:/sample-application.properties"/>
 
-	<import resource="classpath:/saml2-config.xml"/>
+	<import resource="classpath:/saml-config.xml"/>
 	
     <security:http security="none" pattern="/logout.jsp"/>
     <security:http security="none" pattern="/favicon.ico"/>
