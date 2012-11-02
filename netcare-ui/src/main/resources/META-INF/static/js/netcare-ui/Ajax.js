@@ -146,7 +146,7 @@ NC.Ajax = function() {
 				$.ajax(opts);
 			},
 			
-			http_delete : function(url, data, callback, displayMessages) {
+			http_delete : function(url, callback, displayMessages) {
 				var call = _contextPath + _basePath + url;
 				var opts = _getDefaultPostOpts(call, callback, displayMessages);
 				opts.type = 'delete';
