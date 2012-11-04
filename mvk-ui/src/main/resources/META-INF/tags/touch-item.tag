@@ -17,11 +17,9 @@
 
 --%>
 <%@ tag language="java" pageEncoding="UTF-8" body-content="scriptless" %>
-<%@ attribute name="id" required="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <!-- mvk:touch-item -->
-<li id="${id}" class="item withNavigation" style="cursor: pointer;">
 	<div class="containerBoxShadow paperSlip">
 		<div class="top">
 			<div class="wrap"></div>
@@ -41,5 +39,4 @@
 			<div class="right"></div>
 		</div>
 	</div>
-</li>
 <!-- mvk:touch-item / -->
