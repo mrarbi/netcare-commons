@@ -409,23 +409,25 @@ NC.Util = function() {
 			$.each(data, function(index, value) {
 				var target;
 				var alarm;
-				if (value.measurementDefinition.measurementType.valueType.code == 'INTERVAL') {
-					target = value.minTarget + '-' + value.maxTarget;
-					alarm = (value.reportedValue < value.minTarget || value.reportedValue> value.maxTarget);
-					if (alarm) {
-						rc.alarm = true;
+				if (value.definition.valueType == "measurement") {
+					if (value.measurementDefinition.activityItemType.valueType.code == 'INTERVAL') {
+						target = value.minTarget + '-' + value.maxTarget;
+						alarm = (value.reportedValue < value.minTarget || value.reportedValue> value.maxTarget);
+						if (alarm) {
+							rc.alarm = true;
+						}
+					} else {
+						target = value.target;
 					}
-				} else {
-					target = value.target;
+					if (index > 0) {
+						rc.html += '<br/>'
+					}
+					
+					var report = alarm ? '<i style="font-weight: bold">' + value.reportedValue + '</i>' : value.reportedValue ;
+					
+					rc.html += value.measurementDefinition.activityItemType.name + ':&nbsp;' + report + '&nbsp;' 
+						+ value.measurementDefinition.activityItemType.unit.value + '&nbsp;(' + target + ')';
 				}
-				if (index > 0) {
-					rc.html += '<br/>'
-				}
-				
-				var report = alarm ? '<i style="font-weight: bold">' + value.reportedValue + '</i>' : value.reportedValue ;
-				
-				rc.html += value.measurementDefinition.measurementType.name + ':&nbsp;' + report + '&nbsp;' 
-					+ public.formatUnit(value.measurementDefinition.measurementType.unit) + '&nbsp;(' + target + ')';
 				
 			});
 			
