@@ -1,0 +1,28 @@
+Inera Certificate
+Copyright (C) 2012 Inera AB
+
+This application includes the following software:
+
+Springsource, Spring Framework 3.1
+Licensed under Apache Software License 2.0
+http://www.springsource.org/
+
+Simple Logging Facade for Java (SLF4J) 1.6.6
+Licensed under MIT license
+http://www.slf4j.org/license.html
+
+Logback 1.0.6
+Licensed under EPL v1.0 and LGPL 2.1
+http://logback.qos.ch/license.html
+
+JUnit 4.10
+Licensed under Common Public License - v 1.0
+http://www.junit.org/license
+
+Maven Jetty Plugin 8.1.2
+Licensed under Apache Software License 2.0
+http://jetty.codehaus.org/jetty/maven-plugin/license.html
+
+Maven License Plugin
+Licensed under Apache Software License 2.0
+http://code.google.com/p/maven-license-plugin
