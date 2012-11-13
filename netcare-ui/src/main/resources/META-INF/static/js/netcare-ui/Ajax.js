@@ -94,6 +94,14 @@ NC.Ajax = function() {
 				var call = _contextPath + _basePath + url;
 				$.ajax(_getDefaultOpts(call, callback, displayMessages));
 			},
+			
+			getSynchronous : function(url, callback, displayMessages) {
+				var call = _contextPath + _basePath + url;
+				var opts = _getDefaultOpts(call, callback, displayMessages);
+				opts.async = false;
+				
+				$.ajax(opts);
+			},
 
 			getWithParams : function(url, data, callback, displayMessages) {
 				var opts = _getDefaultOpts(_contextPath + _basePath + url, callback, displayMessages);
