@@ -17,11 +17,22 @@
 
 --%>
 <%@ tag language="java" pageEncoding="UTF-8" body-content="scriptless" isELIgnored="false" %>
-<%@ attribute name="title" required="true" %>
+<%@ attribute name="title" required="false" %>
+<%@ attribute name="backTitle" required="false" %>
+<%@ attribute name="backUrl" required="false" %>
+<%@ attribute name="backToWhat" required="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <div id="contentContainer">
-	<h1>${title}</h1>
+	<c:if test="${not empty title}">
+		<h1>${title}</h1>
+	</c:if>
+	
+	<c:if test="${not empty backTitle and not empty backUrl and not empty backToWhat}">
+		<a href="${backUrl}" class="backButton">
+			${backTitle} <span>${backToWhat}</span>
+		</a>
+	</c:if>
 	
 	<div id="inboxDetailWrapperTop">
 		<div class="wrapper"></div>
