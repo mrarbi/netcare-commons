@@ -276,41 +276,6 @@ NC.Util = function() {
 			text += '</i>';
 			
 			return text;
-		}, 
-		
-		formatUnit : function (unitOption) {
-			if (_captions === undefined) {
-				_loadCaptions();
-			}
-			if (unitOption.code == 'METER') {
-				return _captions.meter;
-			}
-			if (unitOption.code == 'MINUTE') {
-				return _captions.minute;
-			}
-			if (unitOption.code == 'STEP') {
-				return _captions.step;
-			}
-			if (unitOption.code == 'KILOGRAM') {
-				return _captions.kilogram;
-			}
-			if (unitOption.code == 'GRAM') {
-				return _captions.gram;
-			}
-			if (unitOption.code == 'PRESSURE_MMHG') {
-				return _captions.pressure_mmhg;
-			}
-			if (unitOption.code == 'FLOW_MLMIN') {
-				return _captions.flow_mlmin;
-			}
-			if (unitOption.code == 'MILLILITER') {
-				return _captions.milliliter;
-			}
-			if (unitOption.code == 'LITER') {
-				return _captions.liter;
-			}
-			
-			return unitOption.code;
 		},
 		
 		/**
@@ -327,16 +292,6 @@ NC.Util = function() {
 					containerDiv.removeClass('error');
 				}
 			})
-		},
-		
-		/**
-		 * Format a civic registration number
-		 */
-		formatCnr : function(cnr) {
-			var first = cnr.substring(0, 8);
-			var last = cnr.substring(8, 12);
-			
-			return first + '-' + last;
 		},
 		
 		/**
