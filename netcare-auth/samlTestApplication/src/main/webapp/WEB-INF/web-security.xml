@@ -34,10 +34,10 @@
 	
 	<!-- Entry point configuration -->
 	<security:http entry-point-ref="samlEntryPoint">
-		 <security:intercept-url pattern="/**" access="ROLE_CITIZEN" />
-	     <security:custom-filter before="FIRST" ref="metadataGeneratorFilter"/>
-	     <security:custom-filter after="BASIC_AUTH_FILTER" ref="samlFilter"/>
-		<security:anonymous />
+		 <security:intercept-url pattern="/**" access="${saml.citizen.roles}" />
+		 <security:custom-filter before="FIRST" ref="metadataGeneratorFilter"/>
+		 <security:custom-filter after="BASIC_AUTH_FILTER" ref="samlFilter"/>
+		 <security:anonymous />
 	</security:http>
 
 </beans>
