@@ -19,6 +19,8 @@
 <%@ tag language="java" pageEncoding="UTF-8" body-content="scriptless" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ attribute name="style" required="false" %>
+<c:if test="${style == null}"><c:set var="style" value="padding-right: 40px;" /></c:if>
 <!-- mvk:touch-item -->
 	<div class="containerBoxShadow paperSlip">
 		<div class="top">
@@ -27,7 +29,7 @@
 			<div class="right"></div>
 		</div>
 		<div class="wrap">
-			<div class="boxShadowBody">
+			<div class="boxShadowBody" style="${style}">
 				<div class="listItemBody">
 					<jsp:doBody />
 				</div>
