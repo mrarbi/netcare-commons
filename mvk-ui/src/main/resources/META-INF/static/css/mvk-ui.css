@@ -900,7 +900,7 @@ ul#inboxDetailList li.caseDetail .date {
 	background-image:url(../img/togglerClosed.png);
 }
 /*** Pagination ***/
-.pagination {
+/*.pagination {
 	margin-top:0.8em;margin-left:0.8em;
 	color:#3f3f3f;
 }
@@ -913,7 +913,7 @@ ul#inboxDetailList li.caseDetail .date {
 .pagination .disabledNavigation {
 	color:grey;
 	margin-left:0.8em;
-}
+}*/
 
 /*Formul�r Vilkor text */
 .villkor .clearfix {
