@@ -21,6 +21,7 @@
 <%@ attribute name="backTitle" required="false" %>
 <%@ attribute name="backUrl" required="false" %>
 <%@ attribute name="backToWhat" required="false" %>
+<%@ attribute name="plain" required="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <div id="contentContainer">
@@ -34,31 +35,39 @@
 		</a>
 	</c:if>
 	
-	<div id="inboxDetailWrapperTop">
-		<div class="wrapper"></div>
-		<div class="left"></div>
-		<div class="right"></div>
-	</div>
-	
-	<div id="inboxDetailWrapper">
-		<div class="wrapper">
-		<div id="maincontainerwrapper">
-			<div class="row-fluid">
-				<div class="span12">
-					<jsp:doBody />
-				</div>
+	<c:choose>
+		<c:when test="${not empty plain}">
+			<div>
+				<jsp:doBody />
 			</div>
-		</div>
-		<div class="clear"></div>
-	</div>
-	</div>
-	
-	<div id="inboxDetailWrapperBottom">
-		<div class="wrapper"></div>
-		<div class="left"></div>
-		<div class="right"></div>
-	</div>
-	
+		</c:when>
+		<c:otherwise>
+			<div id="inboxDetailWrapperTop">
+				<div class="wrapper"></div>
+				<div class="left"></div>
+				<div class="right"></div>
+			</div>
+			
+			<div id="inboxDetailWrapper">
+				<div class="wrapper">
+				<div id="maincontainerwrapper">
+					<div class="row-fluid">
+						<div class="span12">
+							<jsp:doBody />
+						</div>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			</div>
+			
+			<div id="inboxDetailWrapperBottom">
+				<div class="wrapper"></div>
+				<div class="left"></div>
+				<div class="right"></div>
+			</div>
+		</c:otherwise>
+	</c:choose>
 </div>
 <div class="clear"></div>
 		
