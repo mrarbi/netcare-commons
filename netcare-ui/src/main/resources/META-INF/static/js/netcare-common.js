@@ -90,7 +90,7 @@ NC = {
 		return my;
 	})(),
 	
-PAGINATION : (function() {
+	PAGINATION : (function() {
 		
 		var _itemIdPrefix;
 		var _current_page;
@@ -220,6 +220,9 @@ PAGINATION : (function() {
 			_pages = Math.ceil(_count / _numberToShow);
 			
 			_paginationPrefix = '#pi-pag-' + Math.floor(1000 + Math.random() * 1000);
+			
+			// Clear any existing pagination
+			$(_paginationId + ' ul').empty();
 			
 			// Index our stuff
 			_index = new Array();

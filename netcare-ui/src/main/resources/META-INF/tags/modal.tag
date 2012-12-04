@@ -54,6 +54,5 @@
 	</div>
 	<div class="modal-footer">
 		<a href="#" class="btn btn-info"><spring:message code="${confirmCode}" /></a>
-		<a data-dismiss="modal" class="btn"><spring:message code="label.close" /></a>
 	</div>
 </div>
