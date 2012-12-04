@@ -20,6 +20,7 @@
 <%@ attribute name="resourcePath" required="true" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
+<script type="text/javascript" src="<c:url value='${resourcePath}/js/underscore-1.4.2-min.js' />"></script>
 <script type="text/javascript" src="<c:url value='${resourcePath}/js/netcare-common.js' />"></script>
 <script type="text/javascript" src="<c:url value='${resourcePath}/js/netcare-ui/Util.js' />"></script>
 <script type="text/javascript" src="<c:url value='${resourcePath}/js/netcare-ui/PageMessages.js' />"></script>
