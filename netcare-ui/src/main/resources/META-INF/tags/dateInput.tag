@@ -17,6 +17,7 @@
 
 --%>
 <%@ tag language="java" pageEncoding="UTF-8" body-content="empty" %>
+<%@ attribute name="id" required="true" %>
 <%@ attribute name="name" required="true" %>
 <%@ attribute name="classes" required="false" %>
 
@@ -24,4 +25,4 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="netcare" uri="http://www.callistasoftware.org/netcare/tags"%>
 
-<input name="${name}" type="text" placeholder="<spring:message code="pattern.date" />" class="${classes} dateInput" />
+<input id="${id}" name="${name}" type="text" placeholder="<spring:message code="pattern.date" />" class="${classes} dateInput" />
