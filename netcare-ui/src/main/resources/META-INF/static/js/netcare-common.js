@@ -17,6 +17,7 @@
 
 _.templateSettings.variable = "us";
 _.templateSettings = {
+	escape : /\{\{-(.+?)\}\}/g,
 	evaluate:    /\{\{(.+?)\}\}/g,
 	interpolate : /\{\{(.+?)\}\}/g // use mustache style delimiters for underscorejs template  
 };
