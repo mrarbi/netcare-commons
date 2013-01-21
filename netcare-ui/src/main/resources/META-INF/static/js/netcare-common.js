@@ -17,7 +17,8 @@
 
 _.templateSettings.variable = "us";
 _.templateSettings = {
-	  interpolate : /\{\{(.+?)\}\}/g // use mustache style delimiters for underscorejs template  
+	evaluate:    /\{\{(.+?)\}\}/g,
+	interpolate : /\{\{(.+?)\}\}/g // use mustache style delimiters for underscorejs template  
 };
 
 $(document).ready(function() {
