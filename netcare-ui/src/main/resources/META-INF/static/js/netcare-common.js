@@ -192,7 +192,7 @@ NC = {
 		
 		var nextPage = function() {
 			if (_current_page == _pages) {
-				throw new Error('Invalid pagination state. Next button should be disabled');
+				return false;
 			}
 			
 			showPage(_current_page + 1);
@@ -200,7 +200,7 @@ NC = {
 		
 		var previousPage = function() {
 			if (_current_page == 1) {
-				throw new Error('Invalid pagination state. Previous button should be disabled');
+				return false;
 			}
 			
 			showPage(_current_page - 1);
@@ -231,6 +231,7 @@ NC = {
 			
 			// Index our stuff
 			_index = new Array();
+			
 			for (var i = 0; i < _pages; i++) {
 				_index[i] = new Array();
 				
