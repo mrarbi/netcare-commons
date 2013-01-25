@@ -37,7 +37,7 @@
 		<property name="preAuthenticatedUserDetailsService" ref="mvkPreAuthenticationServiceImpl" />
 	</bean>
 	
-	<security:authentication-manager alias="mvkAuthenticationManager">
+	<security:authentication-manager id="mvkAuthenticationManager">
 		<security:authentication-provider ref="preAuthAuthProvider" />
 	</security:authentication-manager>
 
