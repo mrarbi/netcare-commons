@@ -39,6 +39,10 @@ $(document).ready(function() {
 		$(v).datepicker(opts);
 		
 	});
+	
+	$('.timeInput').each(function(i, v) {
+        NC.GLOBAL.validateTimeField($(v));
+	});
 });
 
 NC = {		
@@ -90,6 +94,67 @@ NC = {
 			var last = crn.substring(8, 12);
 			
 			return first + '-' + last;
+		};
+		
+		my.isCharAllowed = function(char, allowedCharacters) {
+            NC.log("Checking if " + char + " is allowed.");
+            var numerics;
+            if (allowedCharacters == undefined) {
+                    // 0-9
+                    numerics = [48,49,50,51,52,53,54,55,56,57];
+            } else {
+                    numerics = allowedCharacters;
+            }
+            
+            NC.log("Allowed characters are: " + numerics);
+            
+            for (var i = 0; i < numerics.length; i++) {
+                    if (char == numerics[i]) {
+                            NC.log("Character allowed!");
+                            return true;
+                    }
+            }
+            NC.log("Character not allowed!");
+            return false;
+		};
+		
+		my.validateTimeField = function(timeField, callback) {
+            var self = this;
+            timeField.keypress(function(event) {
+                    var text = timeField.val();
+                    
+                    NC.log("Character count: " + text.length);
+                    if (text.length == 0 && !self.isCharAllowed(event.which, [48,49,50])) {
+                            event.preventDefault();
+                    }
+                    
+                    if (text.length == 1 && !self.isCharAllowed(event.which)) {
+                            event.preventDefault();
+                    }
+                    
+                    if (text.length == 2 && !self.isCharAllowed(event.which, [58])) {
+                            event.preventDefault();
+                    }
+                    
+                    if (text.length == 3 && !self.isCharAllowed(event.which, [48,49,50,51,52,53])) {
+                            event.preventDefault();
+                    }
+                    
+                    if (text.length == 4 && !self.isCharAllowed(event.which)) {
+                            event.preventDefault();
+                    }
+                    
+                    if (text.length == 5) {
+                            event.preventDefault();
+                    }
+                    
+                    if (event.keyCode == 13 && text.length == 5) {
+                            event.preventDefault();
+                            NC.log("Pressed enter in add time field. Add the time");
+                            if (callback !== undefined)
+                                    callback(text);
+                    }
+            });
 		};
 		
 		return my;
