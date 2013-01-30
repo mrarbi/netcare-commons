@@ -118,6 +118,21 @@ NC = {
             return false;
 		};
 		
+		/**
+		 * http://stackoverflow.com/questions/2495402/validating-javascript-decimal-numbers
+		 * '.' as decimal separator
+		 * 
+		 *   1  : yes
+		 *   1.2: yes
+		 *  -1.2: yes
+		 *  +1.2: no
+		 *    .2: no
+		 *   1. : no
+		 */
+		my.isDecimalNumber = function(value) {
+			return (value.match(/^-?\d+(?:\.\d+)?$/));
+		};
+
 		my.validateTimeField = function(timeField, callback) {
             var self = this;
             timeField.keypress(function(event) {

@@ -166,19 +166,6 @@ NC.Util = function() {
 		},
 		
 		/**
-		 * http://stackoverflow.com/questions/2495402/validating-javascript-decimal-numbers
-		 *   1  : yes
-		 *   1.2: yes
-		 *  -1.2: yes
-		 *  +1.2: no
-		 *    .2: no
-		 *   1. : no
-		 */
-		isDecimalNumber : function(value) {
-			return (value.match(/^-?\d+(?:\.\d+)?$/));
-		},
-
-		/**
 		 * Method for ensuring that the only valid input of the timeField
 		 * is in format XX:XX
 		 * @param timeField - The input field to bind
